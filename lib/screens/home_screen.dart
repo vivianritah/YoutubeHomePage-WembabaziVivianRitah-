@@ -15,6 +15,8 @@ import '../widgets/bottom_navigation_bar.dart';
 import '../widgets/video_card.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +27,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Horizontal Category List
-            Container(
+            SizedBox(
               height: 50,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -40,12 +42,12 @@ class HomeScreen extends StatelessWidget {
             ),
 
             // Shorts Section (Horizontally Scrollable)
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text('Shorts',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             ),
-            Container(
+            SizedBox(
               height: 150,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -57,14 +59,14 @@ class HomeScreen extends StatelessWidget {
             ),
 
             // Regular Videos Section (Vertically Scrollable)
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text('Videos',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             ),
             ListView.builder(
               physics:
-                  NeverScrollableScrollPhysics(), // Disables nested scrolling
+                  const NeverScrollableScrollPhysics(), // Disables nested scrolling
               shrinkWrap: true, // Allows it to take only necessary space
               itemCount: 10, // Number of videos
               itemBuilder: (context, index) {

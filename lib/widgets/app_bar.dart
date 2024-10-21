@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -9,14 +11,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           Image.asset('assets/images/utube.png',
               height: 32), // Add your logo asset
-          Spacer(),
-          Icon(Icons.cast, color: Colors.black),
-          SizedBox(width: 20),
-          Icon(Icons.notifications, color: Colors.black),
-          SizedBox(width: 20),
-          Icon(Icons.search, color: Colors.black),
-          SizedBox(width: 20),
-          CircleAvatar(
+          const Spacer(),
+          const Icon(Icons.cast, color: Colors.black),
+          const SizedBox(width: 20),
+          const Icon(Icons.notifications, color: Colors.black),
+          const SizedBox(width: 20),
+          const Icon(Icons.search, color: Colors.black),
+          const SizedBox(width: 20),
+          const CircleAvatar(
             backgroundColor: Colors.purple,
             child: Text('W'), // Initial or Profile Image
           ),
@@ -26,5 +28,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

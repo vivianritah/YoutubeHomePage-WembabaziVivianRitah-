@@ -40,7 +40,7 @@ class YouTubeHomePageApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(), // Dark theme like YouTube
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
